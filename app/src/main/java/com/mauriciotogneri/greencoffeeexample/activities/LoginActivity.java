@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity
 {
+    public static boolean isFirstLaunch = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -27,6 +29,10 @@ public class LoginActivity extends AppCompatActivity
 
                                                                        login(username.getText().toString(), password.getText().toString());
                                                                    });
+        if (!isFirstLaunch) {
+            finish();
+        }
+        isFirstLaunch = false;
     }
 
     private void login(String username, String password)

@@ -20,6 +20,9 @@ android
         versionName '4.0.0'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
 
     compileOptions
     {
